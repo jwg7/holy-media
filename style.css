@@ -12,8 +12,7 @@
   grid-template-areas:
     "hdr hdr hdr"
     "nav art ads"
-    "ftr ftr ftr"
-  ;
+    "ftr ftr ftr";
 }
 
 #header {
@@ -40,3 +39,32 @@
   grid-area: ftr;
   background-color: #f08a4b;
 }
+
+@media screen and (max-width: 700px) {
+  #app {
+      text-align: center;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 25% 12.5% 37.5% 12.5% 12.5%;
+      grid-template-areas:
+        "hdr"
+        "nav"
+        "art"
+        "ads"
+        "ftr";
+    }
+  }
+
+  @media screen and (max-width: 1100px) and (min-width: 701px) {
+    #app {
+      text-align: center;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 20% 12.5% 50% 17.5%;
+      grid-template-areas:
+        "hdr hdr"
+        "nav nav"
+        "art ads"
+        "ftr ftr";
+    }
+  }
